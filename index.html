@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- highlight.js theme -->
+    <!-- <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/gruvbox-dark-hard.min.css"> -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Title -->
+    <title>My HTML & CSS Cheatsheet</title>
+</head>
+
+<body>
+    <!-- <pre><code class="language-html">...</code></pre> -->
+
+    <main>
+        <h1 class="heading">My HTML & CSS Cheatsheet</h1>
+
+        <!-- Table of contents -->
+        <nav class="toc" id="toc">
+            <ul>
+                <li>
+                    <a href="#html">HTML</a>
+                    <ul>
+                        <li><a href="#table-tags">Table Tags</a></li>
+                        <li><a href="#table-attributes">Table Attributes</a></li>
+                        <li><a href="#forms">HTML Form Tags</a></li>
+                        <li><a href="#forms-attributes">Form Attributes</a></li>
+                        <li><a href="#semantic-html">Semantic HTML</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#css">CSS</a>
+                    <ul>
+                        <li><a href="#css-selectors">CSS selectors</a></li>
+                        <li><a href="#display-css">Display Property in CSS</a></li>
+                        <li><a href="#position-css">Position Property in CSS</a></li>
+                    </ul>
+                </li>
+                </ol>
+        </nav>
+
+        <!-- HTML -->
+        <h2 id="html" class="heading">HTML</h2>
+
+        <!-- HTML table tags -->
+        <section id="table-tags">
+            <h3>Table Tags</h3>
+            <table>
+                <thead>
+                    <th>Tag</td>
+                    <th>Name</td>
+                    <th>Description</td>
+                    <th>Reference</td>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <code>&lt;table&gt;</code>
+                        </td>
+                        <td>Table</td>
+                        <td>The wrapper element for all HTML tables.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table"
+                                target="_blank">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_table.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;thead&gt;</code>
+                        </td>
+                        <td>Table Head</td>
+                        <td>The set of rows defining the column headers in a table.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead"
+                                target="_blank">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_thead.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;tbody&gt;</code>
+                        </td>
+                        <td>Table Body</td>
+                        <td>This HTML element encapsulates a set of table rows, indicating that they comprise the body
+                            of the table.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody"
+                                target="_blank">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_tbody.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;tr&gt;</code>
+                        </td>
+                        <td>Table Row</td>
+                        <td>HTML element defines a row of cells in a table. The row's cells can then be established
+                            using a mix of <code>&lt;td&gt;</code> (data cell) and <code>&lt;th&gt;</code> (header cell)
+                            elements.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr"
+                                target="_blank">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_tr.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;td&gt;</code>
+                        </td>
+                        <td>Table Data</td>
+                        <td>Defines a cell of a table that contains data.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td"
+                                target="_blank">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_td.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;tfoot&gt;</code>
+                        </td>
+                        <td>Table Foot</td>
+                        <td>Defines a set of rows summarizing the columns of the table.</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot"
+                                target="_blank">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_tfoot.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;colgroup&gt;</code></td>
+                        <td>Table Column Group</td>
+                        <td>This HTML element defines a group of columns within a table.</td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup"
+                                target="_blank">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_colgroup.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;col&gt;</code></td>
+                        <td>Table Column</td>
+                        <td> HTML element defines a column within a table and is used for defining common semantics on
+                            all common cells. It is generally found within a <code>&lt;colgroup&gt;</code> element.</td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup"
+                                target="_blank">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_col.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- HTML table attributes section -->
+        <section id="table-attributes">
+            <!-- Table attributes -->
+            <h3>Table attributes</h3>
+            <table>
+                <thead>
+                    <th>Tag</th>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                    <th>Reference</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">
+                            <code>&lt;td&gt;</code>
+                        </td>
+                        <td>
+                            <code>colspan</code>
+                        </td>
+                        <td>This attribute defines for how many columns the cell extends.</td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-colspan"
+                                target="_blank" rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/att_td_colspan.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td>
+                            <code>rowspan</code>
+                        </td>
+                        <td>This attribute defines for how many rows the cell extends.</td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-rowspan"
+                                target="_blank" rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/att_td_rowspan.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;colgroup&gt;</code>
+                        </td>
+                        <td>
+                            <code>span</code>
+                        </td>
+                        <td>This attribute defines the number of consecutive columns the <code>&lt;colgroup&gt;</code>
+                            element spans.</td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup#attr-span"
+                                target="_blank" rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/att_colgroup_span.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- HTML forms section -->
+        <section id="forms">
+            <h3>HTML Form Tags</h3>
+            <p>General reference: <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank"
+                    rel="noopener noreferrer">W3Schools</a>
+            </p>
+            <table>
+                <thead>
+                    <th>Tag</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Reference</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;form&gt;</code></td>
+                        <td>Form element</td>
+                        <td>The wrapper element for all HTML form elements. It represents a document section containing
+                            interactive controls for submitting information.</td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_form.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;input&gt;</code></td>
+                        <td>Input (Form Input) element</td>
+                        <td>This tag specifies an input field where the user can enter data.
+                            There are many different types, e.g. text (default), checkbox, submit,
+                            tel, password, etc. (see attributes). </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_input.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;select&gt;</code></td>
+                        <td>Select element</td>
+                        <td>This element is used to create a drop-down list. The <code>&lt;option&gt;</code> tags inside
+                            the <code>&lt;select&gt;</code> element define the available options in the drop-down list.
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_select.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;datalist&gt;</code></td>
+                        <td>Data List element</td>
+                        <td>This element specifies a list of pre-defined options for an <code>&lt;input&gt;</code>
+                            element. It is used to provide an "autocomplete" feature.</td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_datalist.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;textarea&gt;</code></td>
+                        <td>Textarea element</td>
+                        <td>This element defines a multi-line text input control.</td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_textarea.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Form elements attributes -->
+        <section id="forms-attributes">
+            <h3>Form elements attributes</h3>
+            <table>
+                <thead>
+                    <th>Tag</th>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                    <th>Reference</th>
+                </thead>
+                <tr>
+                    <td rowspan="2"><code>&lt;form&gt;</code></td>
+                    <td><code>action</code></td>
+                    <td>This attribute specifies where to send the form-data when a form is submitted.</td>
+                    <td>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-action"
+                            target="_blank" rel="noopener noreferrer">MDN</a>,
+                        <a href="https://www.w3schools.com/tags/att_form_action.asp" target="_blank"
+                            rel="noopener noreferrer">W3Schools</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>method</code></td>
+                    <td>The HTTP method (GET, POST) to submit the form with.</td>
+                    <td>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-method"
+                            target="_blank" rel="noopener noreferrer">MDN</a>,
+                        <a href="https://www.w3schools.com/tags/att_form_method.asp" target="_blank"
+                            rel="noopener noreferrer">W3Schools</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="5"><code>&lt;input&gt;</code></td>
+                    <td><code>type</code></td>
+                    <td>This attribute specifies the type of <code>&lt;input&gt;</code> element to display, such as:
+                        <ul>
+                            <li><code>text</code>: a simple textbox</li>
+                            <li><code>password</code>: defines a password field (characters are masked)</li>
+                            <li><code>number</code>: defines a field for entering a number</li>
+                            <li><code>range</code>: defines a range control (like a slider control)</li>
+                            <li><code>checkbox</code>: defines a checkbox</li>
+                            <li><code>radio</code>: defines a radio button</li>
+                            <li><code>submit</code>: defines a submit button</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types"
+                            target="_blank" rel="noopener noreferrer">MDN</a>,
+                        <a href="https://www.w3schools.com/tags/att_input_type.asp" target="_blank"
+                            rel="noopener noreferrer">W3Schools</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Name of the form control. Submitted with the form as part of a name/value pair. Consider the
+                        <code>name</code> a required attribute (even though it's not).
+                    </td>
+                    <td>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#name" target="_blank"
+                            rel="noopener noreferrer">MDN</a>,
+                        <a href="https://www.w3schools.com/tags/att_input_name.asp" target="_blank"
+                            rel="noopener noreferrer">W3Schools</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>value</code></td>
+                    <td> value of an <code>input</code> element. Behaviour depends on the input type (see reference).
+                    </td>
+                    <td>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value" target="_blank"
+                            rel="noopener noreferrer">MDN</a>,
+                        <a href="https://www.w3schools.com/tags/att_input_value.asp" target="_blank"
+                            rel="noopener noreferrer">W3Schools</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>required</code></td>
+                    <td>Makes input required.</td>
+                    <td>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#required"
+                            target="_blank" rel="noopener noreferrer">MDN</a>,
+                        <a href="https://www.w3schools.com/tags/att_input_required.asp" target="_blank"
+                            rel="noopener noreferrer">W3Schools</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>list</code></td>
+                    <td>The list attribute refers to a <code>datalist</code> element that contains pre-defined options
+                        for an <code>input</code> element.</td>
+                    <td>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#list" target="_blank"
+                            rel="noopener noreferrer">MDN</a>,
+                        <a href="https://www.w3schools.com/tags/att_input_list.asp" target="_blank"
+                            rel="noopener noreferrer">W3Schools</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="4"><code>datalist</code></td>
+                    <td><code>rows</code></td>
+                    <td>Specifies the visible number of lines in a text area</td>
+                    <td>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-rows"
+                            target="_blank" rel="noopener noreferrer">MDN</a>,
+                        <a href="https://www.w3schools.com/tags/att_textarea_rows.asp" target="_blank"
+                            rel="noopener noreferrer">W3Schools</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>cols</code></td>
+                    <td>Specifies the visible width of a text area</td>
+                    <td>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-cols"
+                            target="_blank" rel="noopener noreferrer">MDN</a>,
+                        <a href="https://www.w3schools.com/tags/att_textarea_cols.asp" target="_blank"
+                            rel="noopener noreferrer">W3Schools</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>maxlength</code></td>
+                    <td>Specifies the maximum number of characters allowed in the text area</td>
+                    <td>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-maxlength"
+                            target="_blank" rel="noopener noreferrer">MDN</a>,
+                        <a href="https://www.w3schools.com/tags/att_textarea_maxlength.asp" target="_blank"
+                            rel="noopener noreferrer">W3Schools</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>placeholder</code></td>
+                    <td>A hint to the user of what can be entered in the control. </td>
+                    <td>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-placeholder"
+                            target="_blank" rel="noopener noreferrer">MDN</a>,
+                        <a href="https://www.w3schools.com/tags/att_textarea_placeholder.asp" target="_blank"
+                            rel="noopener noreferrer">W3Schools</a>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Semantic HTML section -->
+        <section id="semantic-html">
+            <h3>Semenatic HTML Tags</h3>
+            <p>General reference: <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank"
+                    rel="noopener noreferrer">W3Schools</a></p>
+            <table>
+                <thead>
+                    <th>Tag</td>
+                    <th>Name</td>
+                    <th>Description</td>
+                    <th>Reference</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;header&gt;</code></td>
+                        <td>Header</td>
+                        <td>Container for navigational links or introductory content.</td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_header.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;nav&gt;</code></td>
+                        <td>
+                            Navigation
+                        </td>
+                        <td>
+                            Container for major navigational links on the site.
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_nav.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;main&gt;</code>
+                        </td>
+                        <td>
+                            Main
+                        </td>
+                        <td>
+                            Container for the main content of the page.
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_main.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;article&gt;</code>
+                        </td>
+                        <td>
+                            Article
+                        </td>
+                        <td>
+                            Container for self-contained content that could exist on its own, and it should be possible
+                            to
+                            distribute it independently from the rest of the web site.
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_article.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;section&gt;</code>
+                        </td>
+                        <td>
+                            Section
+                        </td>
+                        <td>
+                            Container for content that is grouped together, and typically has a heading.
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_section.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;aside&gt;</code>
+                        </td>
+                        <td>
+                            Aside
+                        </td>
+                        <td>
+                            This element defines some content aside from the content it is placed in (like a sidebar).
+                            Its content should be indirectly related to the surrounding content.
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_aside.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;footer&gt;</code>
+                        </td>
+                        <td>
+                            Footer
+                        </td>
+                        <td>
+                            Used mainly to display contact info., terms of use, copyright info, etc. at the end of the
+                            webpage body.
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_footer.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;figure&gt;</code>
+                        </td>
+                        <td>
+                            Figure
+                        </td>
+                        <td>
+                            This tag specifies self-contained content, like illustrations, diagrams, photos, code
+                            listings, etc.
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_figure.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;figcaption&gt;</code>
+                        </td>
+                        <td>
+                            Figure Caption
+                        </td>
+                        <td>
+                            The <code>&lt;figcaption&gt;</code>tag defines a caption for a <code>&lt;figure&gt;</code>
+                            element.
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption"
+                                target="_blank" rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_figcaption.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;details&gt;</code>
+                        </td>
+                        <td>
+                            Details
+                        </td>
+                        <td>
+                            The <code>&lt;details&gt;</code> tag specifies additional details that the user can view or
+                            hide on demand.
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                            <a href="https://www.w3schools.com/tags/tag_details.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- CSS -->
+        <h2 id="css" class="heading">CSS</h2>
+
+        <!-- CSS selectors -->
+        <section id="css-selectors">
+            <h3>CSS selectors</h3>
+            <p>General reference: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors"
+                    target="_blank" rel="noopener noreferrer">MDN</a>
+                and <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank"
+                    rel="noopener noreferrer">W3Schools</a></p>
+            <table>
+                <thead>
+                    <th>Selector</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>*</code></td>
+                        <td>Universal selector: Selects all elements</td>
+                        <td>
+                            CSS: <code>* {}</code></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>element</code></td>
+                        <td>Selects all specified HTML elements</td>
+                        <td><code>h1 {}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>.class</code></td>
+                        <td>Selects all elements with the specified class</td>
+                        <td>
+                            HTML: <code>&lt;nav class="navigation"&gt;&lt;/nav&gt;</code><br>
+                            CSS: <code>.navigation {}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>#id</code></td>
+                        <td>Selects the element with the specified id</td>
+                        <td>
+                            HTML: <code>&lt;div id="main"&gt;&lt;/div&gt;</code><br>
+                            CSS: <code>#main {}</code></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>[attribute]</code></td>
+                        <td>Selects all elements with a target attribute. Can be further specified to target attributes
+                            with specified values etc.</td>
+                        <td>
+                            HTML: <code>&lt;div class="main"&gt;&lt;/div&gt;</code><br>
+                            CSS: <code>[class] {}</code></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>.class1.class2</code></td>
+                        <td>Selects all elements with both class1 and class2 set within its class attribute</td>
+                        <td>
+                            HTML: <code>&lt;div class="border highlight"&gt;&lt;/div&gt;</code><br>
+                            CSS: <code>.border.highlight {}</code></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>.class1 .class2</code></td>
+                        <td>Descendant combinator: The " " (space) combinator selects all elements with class2 that is a
+                            descendant of an element with class1</td>
+                        <td>
+                            HTML:
+                            <code>&lt;div class="container"&gt;&lt;div class="border"&gt;&lt;/div&gt;&lt;/div&gt;</code><br>
+                            CSS: <code>.container .border {}</code>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>element, element</code></td>
+                        <td>The <code>,</code> selector is a grouping method that selects all the matching nodes.</td>
+                        <td>
+                            CSS: <code>h1, h2, h3 {}</code></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>element > element</code></td>
+                        <td>Child combinator: The <code>></code> combinator selects nodes that are direct children of
+                            the first element.
+                        </td>
+                        <td>
+                            HTML:
+                            <code>&lt;div class="container"&gt;&lt;div class="border"&gt;&lt;/div&gt;&lt;/div&gt;</code><br>
+                            CSS: <code>.container > .border {}</code>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>element + element</code></td>
+                        <td>Adjacent sibling combinator: The <code>+</code> combinator matches the second element only
+                            if it immediately follows the first element. </td>
+                        <td>
+                            HTML:
+                            <code>&lt;div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;</code><br>
+                            CSS: <code>div + p {}</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>element ~ element</code></td>
+                        <td>General sibling combinator: The <code>~</code> combinator selects siblings. This means that
+                            the second element follows the first (though not necessarily immediately), and both share
+                            the same parent.</td>
+                        <td>
+                            HTML: <code>&lt;span>This is not red.&lt;/span>
+                                &lt;p>Here is a paragraph.&lt;/p>
+                                &lt;aside>Some aside content&lt;/code>
+                                &lt;span>And here is a red span!&lt;/span></code><br>
+                            CSS: <code>p ~ span {color: red;}</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>:</code></td>
+                        <td>The <code>:</code> pseudo allow the selection of elements based on state
+                            information that is not contained in the document tree. Reference: <a
+                                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank"
+                                rel="noopener noreferrer">MDN</a></td>
+                        <td><code>:hover</code>,
+                            <code>:active</code>, <code>:hover</code> etc.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>::</code></td>
+                        <td>The <code>::</code> pseudo represent entities that are not included in HTML. Reference: <a
+                                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">MDN</a></td>
+                        <td><code>::after</code>, <code>::before</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Display Property in CSS -->
+        <section id="display-css">
+            <h3>Display Property in CSS</h3>
+            <p>General reference: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display?retiredLocale=de"
+                    target="_blank" rel="noopener noreferrer">MDN</a>,
+                <a href="https://www.w3schools.com/cssref/pr_class_display.asp" target="_blank"
+                    rel="noopener noreferrer">W3Schools</a>,
+                <a href="https://www.freecodecamp.org/news/the-css-display-property-display-none-display-table-inline-block-and-more/"
+                    target="_blank" rel="noopener noreferrer">freeCodeCamp</a>
+            </p>
+            <table>
+                <thead>
+                    <th>Value</th>
+                    <th>Description</th>
+                    <th>Reference</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>inline</code></td>
+                        <td>The element generates one or more inline element boxes that do not generate line breaks
+                            before or after themselves.
+                            In normal flow, the next element will be on the same line if there is space</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>block</code></td>
+                        <td>The element generates a block element box, generating line breaks both before and after the
+                            element when in the normal flow.</td>
+
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>inline-block</code></td>
+                        <td>The element generates a block element box that will be flowed with surrounding content as if
+                            it were a single inline box (behaving much like a replaced element would).</td>
+                        <td><a href="https://www.w3schools.com/css/css_inline-block.asp" target="_blank"
+                                rel="noopener noreferrer">W3Schools</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Position Property in CSS -->
+        <section id="position-css">
+            <h3>Position Property in CSS</h3>
+            <p>General reference:
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank"
+                    rel="noopener noreferrer">MDN</a>,
+                <a href="https://www.w3schools.com/cssref/pr_class_position.asp" target="_blank"
+                    rel="noopener noreferrer">W3Schools</a>
+            </p>
+            <table>
+                <thead>
+                    <th>Value</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>static</code></td>
+                        <td>The element is positioned according to the normal flow of the document. This is the default
+                            value.</td>
+                    </tr>
+                    <tr>
+                        <td><code>relative</code></td>
+                        <td>The element is positioned relative to its normal position, so "left:20px" adds 20 pixels to
+                            the element's LEFT position.</td>
+                    </tr>
+                    <tr>
+                        <td><code>absolute</code></td>
+                        <td>The element is <strong>removed</strong> from the normal document flow, and no space is
+                            created for the element in the page layout. It is positioned relative to its closest
+                            positioned ancestor</td>
+                    </tr>
+                    <tr>
+                        <td><code>fixed</code></td>
+                        <td>The element is removed from the normal document flow, and no space is created for the
+                            element in the page layout. The element is positioned relative to the browser window. Its
+                            final position is determined by the values of top, right, bottom, and left. Used to create a
+                            navigation bar that should always be visible.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sticky</code></td>
+                        <td>The element is positioned based on the user's scroll position.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- JS syntax highlighter -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script> -->
+
+</body>
+
+</html>

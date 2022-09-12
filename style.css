@@ -1,0 +1,71 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #1b1b1b;
+    color: white;
+    
+}
+
+code {
+    font-family: 'Ubuntu Mono', Consolas, monospace;
+    background-color: #343434;
+    padding: .125rem 0;
+}
+
+li > code {
+    line-height: 1.5;
+}
+
+a {
+    color: rgb(94, 158, 255)
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+.heading {
+    background-color: #343434;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid grey;
+}
+
+table,
+th,
+td {
+    border: 1px solid rgb(200, 200, 200);
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+
+th,
+td {
+    padding: 5px 10px;
+    border-top-width: 0;
+    border-left-width: 0;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    color: white;
+    background: #343434;
+    vertical-align: bottom;
+}
+
+th:last-child,
+td:last-child {
+    border-right-width: 0;
+}
+
+tr:last-child td {
+    border-bottom-width: 0;
+}
