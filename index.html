@@ -652,6 +652,7 @@
                     <th>Selector</th>
                     <th>Description</th>
                     <th>Example</th>
+                    <th>Reference</th>
                 </thead>
                 <tbody>
                     <tr>
@@ -660,34 +661,30 @@
                         <td>
                             CSS: <code>* {}</code></td>
                         </td>
-                    </tr>
-                    <tr>
-                        <td><code>element</code></td>
-                        <td>Selects all specified HTML elements</td>
-                        <td><code>h1 {}</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>.class</code></td>
-                        <td>Selects all elements with the specified class</td>
                         <td>
-                            HTML: <code>&lt;nav class="navigation"&gt;&lt;/nav&gt;</code><br>
-                            CSS: <code>.navigation {}</code></td>
-                    </tr>
-                    <tr>
-                        <td><code>#id</code></td>
-                        <td>Selects the element with the specified id</td>
-                        <td>
-                            HTML: <code>&lt;div id="main"&gt;&lt;/div&gt;</code><br>
-                            CSS: <code>#main {}</code></td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
                         </td>
                     </tr>
                     <tr>
-                        <td><code>[attribute]</code></td>
-                        <td>Selects all elements with a target attribute. Can be further specified to target attributes
-                            with specified values etc.</td>
+                        <td><code>element</code></td>
+                        <td>Type selector: Selects all specified HTML elements</td>
+                        <td><code>h1 {}</code></td>
                         <td>
-                            HTML: <code>&lt;div class="main"&gt;&lt;/div&gt;</code><br>
-                            CSS: <code>[class] {}</code></td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>.class</code></td>
+                        <td>Class selector: Selects all elements with the specified class</td>
+                        <td>
+                            HTML: <code>&lt;nav class="navigation"&gt;&lt;/nav&gt;</code><br>
+                            CSS: <code>.navigation {}</code>
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
                         </td>
                     </tr>
                     <tr>
@@ -697,27 +694,63 @@
                             HTML: <code>&lt;div class="border highlight"&gt;&lt;/div&gt;</code><br>
                             CSS: <code>.border.highlight {}</code></td>
                         </td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <td><code>.class1 .class2</code></td>
-                        <td>Descendant combinator: The " " (space) combinator selects all elements with class2 that is a
-                            descendant of an element with class1</td>
+                    <tr>
+                        <td><code>#id_value</code></td>
+                        <td>Selects the element with the specified id</td>
                         <td>
-                            HTML:
-                            <code>&lt;div class="container"&gt;&lt;div class="border"&gt;&lt;/div&gt;&lt;/div&gt;</code><br>
-                            CSS: <code>.container .border {}</code>
+                            HTML: <code>&lt;div id="main"&gt;&lt;/div&gt;</code><br>
+                            CSS: <code>#main {}</code></td>
                         </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors" target="_blank"
+                                rel="noopener noreferrer">MDN</a>,
                         </td>
                     </tr>
                     <tr>
-                        <td><code>element, element</code></td>
+                        <td><code>[attribute]</code></td>
+                        <td>Selects all elements with a target attribute. Can be further specified to target attributes
+                            with specified values etc.</td>
+                        <td>
+                            HTML: <code>&lt;a title="some title"&gt;&lt;/a&gt;</code><br>
+                            CSS: <code>a[title] {}</code></td>
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" target="_blank"
+                                rel="noopener noreferrer">MDN</a>
+                        </td>
+                    </tr>
+                        <td><code>selector1 selector2</code></td>
+                        <td>Descendant combinator: The " " (space) combinator combines two selectors such that elements
+                            matched by the second selector are selected if they have an ancestor element (parent,
+                            parent's parent, parent's parent's parent, etc.) matching the
+                            first selector.</td>
+                        <td>
+                            <code>/* List items that are descendants of the "my-things" list */
+                                ul.my-things li {}</code>
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator"
+                                target="_blank" rel="noopener noreferrer">MDN</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>selector1, selector2, ... </code></td>
                         <td>The <code>,</code> selector is a grouping method that selects all the matching nodes.</td>
                         <td>
-                            CSS: <code>h1, h2, h3 {}</code></td>
+                            <code>#main,
+                                .content,
+                                article {}</code></td>
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list" target="_blank"
+                                rel="noopener noreferrer">MDN</a>
                         </td>
                     </tr>
                     <tr>
-                        <td><code>element > element</code></td>
+                        <td><code>selector1 > selector2</code></td>
                         <td>Child combinator: The <code>></code> combinator selects nodes that are direct children of
                             the first element.
                         </td>
@@ -726,10 +759,13 @@
                             <code>&lt;div class="container"&gt;&lt;div class="border"&gt;&lt;/div&gt;&lt;/div&gt;</code><br>
                             CSS: <code>.container > .border {}</code>
                         </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Child_selectors" target="_blank"
+                                rel="noopener noreferrer">MDN</a>
                         </td>
                     </tr>
                     <tr>
-                        <td><code>element + element</code></td>
+                        <td><code>former_element + target_element</code></td>
                         <td>Adjacent sibling combinator: The <code>+</code> combinator matches the second element only
                             if it immediately follows the first element. </td>
                         <td>
@@ -737,9 +773,13 @@
                             <code>&lt;div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;</code><br>
                             CSS: <code>div + p {}</code>
                         </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator"
+                                target="_blank" rel="noopener noreferrer">MDN</a>
+                        </td>
                     </tr>
                     <tr>
-                        <td><code>element ~ element</code></td>
+                        <td><code>former_element ~ target_element</code></td>
                         <td>General sibling combinator: The <code>~</code> combinator selects siblings. This means that
                             the second element follows the first (though not necessarily immediately), and both share
                             the same parent.</td>
@@ -750,22 +790,25 @@
                                 &lt;span>And here is a red span!&lt;/span></code><br>
                             CSS: <code>p ~ span {color: red;}</code>
                         </td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator" target="_blank" rel="noopener noreferrer">MDN</a></td>
                     </tr>
                     <tr>
                         <td><code>:</code></td>
                         <td>The <code>:</code> pseudo allow the selection of elements based on state
-                            information that is not contained in the document tree. Reference: <a
-                                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank"
-                                rel="noopener noreferrer">MDN</a></td>
+                            information that is not contained in the document tree.</td>
                         <td><code>:hover</code>,
                             <code>:active</code>, <code>:hover</code> etc.
                         </td>
+                        <td><a
+                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank"
+                            rel="noopener noreferrer">MDN</a></td>
                     </tr>
                     <tr>
                         <td><code>::</code></td>
-                        <td>The <code>::</code> pseudo represent entities that are not included in HTML. Reference: <a
-                                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">MDN</a></td>
+                        <td>The <code>::</code> pseudo represent entities that are not included in HTML.</td>
                         <td><code>::after</code>, <code>::before</code></td>
+                        <td><a
+                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">MDN</a></td>
                     </tr>
                 </tbody>
             </table>
