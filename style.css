@@ -24,6 +24,10 @@ a {
     cursor: pointer;
 }
 
+.table-overflow {
+    overflow-x: auto;
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -35,8 +39,9 @@ h1 {
     padding: 10px 0;
     background-color: #343434;
     border-top: 2px solid gray;
-    border-bottom: 2px solid grey;
-    padding: 0 10px;
+    border-bottom: 2px solid gray;
+    margin: 0 -20px;
+
 }
 
 h2 {
@@ -56,8 +61,7 @@ td {
 
 table {
     border-spacing: 0;
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
 }
 
 
