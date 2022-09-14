@@ -5,6 +5,10 @@ body {
     
 }
 
+main {
+    margin: 0 20px;
+}
+
 code {
     font-family: 'Ubuntu Mono', Consolas, monospace;
     background-color: #343434;
@@ -29,23 +33,36 @@ h1 {
     font-weight: 700;
     text-align: center;
     padding: 10px 0;
-}
-
-.heading {
     background-color: #343434;
     border-top: 2px solid gray;
     border-bottom: 2px solid grey;
+    padding: 0 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+.heading {
+
+
 }
 
 table,
 th,
 td {
-    border: 1px solid rgb(200, 200, 200);
+    border: 1px solid rgb(102, 99, 99);
 }
 
 table {
     border-spacing: 0;
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
 }
 
 
